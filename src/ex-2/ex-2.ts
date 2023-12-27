@@ -1,3 +1,6 @@
-import server from '../lib/server';
+import Server from '../lib/server';
 
-server;
+const serverInstance = new Server(8080);
+const server = serverInstance.server();
+
+export default server;

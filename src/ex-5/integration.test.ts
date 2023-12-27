@@ -1,10 +1,12 @@
 import axios from 'axios';
-import { port } from '../config';
-import server from '../lib/server';
+import Server from '../lib/server';
+
+const port = 8080;
+let server: any;
 
 describe('Integration Tests', () => {
     beforeAll(() => {
-        server;
+        server = new Server(port).server();
     });
 
     it('GET request should return { answer: "0" }', async () => {
