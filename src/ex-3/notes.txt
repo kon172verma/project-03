@@ -1,0 +1,18 @@
+Notes:
+
+1. command used to compile the code: "npx tsc"
+2. To keep the size of zip file less than 50MB:
+
+(i) changed package.json to include following dependencies only, while compiling the code.
+
+    "dependencies": {
+        "log4js": "^6.9.1",
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.130"
+    }
+
+(ii) changed exclude line in tsconfig.json from-to:
+
+    "exclude": ["aws", "src/__tests__/", "node_modules", "dist"]
+    "exclude": ["aws", "src/__tests__/", "node_modules", "src/ex-1/", "src/ex-2/", "src/ex-4/"]

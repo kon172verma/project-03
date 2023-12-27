@@ -9,7 +9,6 @@
         "resolveJsonModule": true,
         "outDir": "./dist/src"
     },
-
     "include": ["src"],
-    "exclude": ["aws", "src/__tests__/", "node_modules"]
+    "exclude": ["aws", "src/__tests__/", "node_modules", "dist"]
 }
